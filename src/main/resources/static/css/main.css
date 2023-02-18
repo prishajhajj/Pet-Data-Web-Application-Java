@@ -1,0 +1,17 @@
+
+h1 {
+    color: teal;
+    font-family: "Lucida Console", "Courier New", monospace;
+    outline-style: solid;
+    outline-color: coral;
+    outline-width: 5px;
+    padding: 10px;
+    background-color: lightcyan;
+    text-align: center;
+}
+
+h2 {
+    color: teal;
+    text-decoration-line: underline;
+    font-size: 25px;
+}

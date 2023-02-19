@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+
+<main>
+    <h1>Pet Details</h1>
+
+    <div th:object="${pet}">
+        <p>
+            <label class="g_label">Pet First Name:</label>
+            <span class="output" th:text="*{firstName}">Alice</span>
+        </p>
+
+        <p>
+            <label class="g_label">Pet Last Name:</label>
+            <span class="output" th:text="*{lastName}">Chops</span>
+        </p>
+
+        <p>
+            <label class="g_label">Pet Kind:</label>
+            <span class="output" th:text="*{petKind}">Cat</span>
+        </p>
+
+        <p>
+            <label class="g_label">Pet Gender:</label>
+            <span class="output" th:text="*{petGender}">Female</span>
+        </p>
+
+        <p>
+            <label class="g_label">Pet Vaccination Status:</label>
+            <span class="output" th:text="*{petVaccination}?'yes':'no'">yes</span>
+        </p>
+    </div>
+
+
+    <p><a href="AddPets.html" th:href="@{add-pet}">Add A Pet</a></p>
+    <p><a href="ListPets.html" th:href="@{list-all-pets}">List All Pets</a></p>
+    <p><a href="Index.html" th:href="@{index}">Back to Index</a></p>
+    <p><a href="EditPets.html" th:href="@{index}">Edit Pet Record</a></p>
+
+
+
+</main>
+
+</body>
+</html>

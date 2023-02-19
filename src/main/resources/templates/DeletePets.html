@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+    <link th:href="@{css/main.css}" href="../static/css/main1.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<main>
+    <h1>Delete Pet</h1>
+    <p class="message">Are you sure you want to remove this pet record from the list?</p>
+    <h2>Data of Pet About to be Removed:</h2>
+
+    <div th:object="${pet}">
+        <p>
+            <label class="g_label">First Name= </label>
+            <span class="output" th:text="*{firstName}">Alice</span>
+        </p>
+
+        <p>
+            <label class="g_label">Last Name=</label>
+            <span class="output" th:text="*{lastName}">Chops</span>
+        </p>
+
+        <p>
+            <label class="g_label">Pet Kind=</label>
+            <span class="output" th:text="*{petKind}">Cat</span>
+        </p>
+
+        <p>
+            <label class="g_label">Pet Gender=</label>
+            <span class="output" th:text="*{petGender}">Female</span>
+        </p>
+
+        <p>
+            <label class="g_label">Vaccinated=</label>
+            <span class="output" th:text="*{petVaccination}?'yes':'no'">yes</span>
+        </p>
+    </div>
+
+    <form method="post"
+          th:action="@{remove-a-pet}" action="ListPets.html">
+        <input type="hidden" name="id" th:value="${pet.id}">
+        <input type="submit" value="Remove Pet">
+    </form>
+
+    <p><a href="ListPets.html" th:href="@{list-all-students}">List All Pets</a></p>
+    <p><a href="Index.html" th:href="@{index}">Back to Index</a></p>
+    <p><a href="AddPets.html" th:href="@{add-a-pet}">Add All Pet</a></p>
+
+</main>
+
+</body>
+</html>

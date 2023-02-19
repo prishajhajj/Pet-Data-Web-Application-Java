@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmation</title>
+    <link th:href="@{/css/main1.css}" href="../static/css/main1.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<main>
+    <h1>Confirm Insert of Pet Record</h1>
+    <h2>Entered Data</h2>
+
+    <div th:object="${form}">
+        <p>
+        <label class="g_label">Pet First Name:</label>
+        <span class="output" th:text="*{firstName}">Alice</span>
+        </p>
+
+        <p>
+            <label class="g_label">Pet Last Name:</label>
+            <span class="output" th:text="*{firstName}">Chops</span>
+        </p>
+
+        <p>
+            <label class="g_label">Pet Kind:</label>
+            <span class="output" th:text="*{petKind}">Cat</span>
+        </p>
+
+        <p>
+            <label class="g_label">Pet Gender:</label>
+            <span class="output" th:text="*{petGender}">Female</span>
+        </p>
+
+        <p>
+            <label class="g_label">Pet Vaccination Status:</label>
+            <span class="output" th:text="*{petVaccination}?'yes':'no'">yes</span>
+        </p>
+    </div>
+
+
+    <p><a href="AddPets.html" th:href="@{add-pet}">Add A Pet</a></p>
+    <p><a href="ListPets.html" th:href="@{list-all-pets}">List All Pets</a></p>
+    <p><a href="Index.html" th:href="@{index}">Back to Index</a></p>
+
+</main>
+</body>
+</html>
